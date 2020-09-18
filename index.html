@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style></style>
+  </head>
+  <body>
+    <center>
+      <form method="post">
+        <input type="test" name="test" id="test" onkeyup="onclickevent()" />
+      </form>
+      <h3>revered string</h3>
+      <div id="root"></div>
+    </center>
+    <script>
+      function onclickevent() {
+        let a = document.getElementById("test").value;
+        document.getElementById("root").innerHTML = reversestr(a);
+      }
+      function reversestr(str) {
+        let arr = [];
+        for (let i = 0; i < str.length; i++) {
+          arr.unshift(str[i]);
+        }
+        return arr.join("");
+      }
+    </script>
+  </body>
+</html>
